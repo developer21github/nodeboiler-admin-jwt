@@ -42,7 +42,7 @@ build/Release
 node_modules
 
 # upload directory
-uploads/
+
 
 # Optional npm cache directory
 .npm

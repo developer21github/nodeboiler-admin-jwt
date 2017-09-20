@@ -2,6 +2,7 @@ import express from 'express';
 import userRoutes from './user.route';
 import adminRoutes from './admin.route';
 import testimonialRoutes from './testimonial.route';
+import portfolioRoutes from './portfolio.route';
 
 const router = express.Router(); // eslint-disable-line new-cap
 
@@ -17,5 +18,7 @@ router.use('/api/users', userRoutes);
 router.use('/auth', adminRoutes);
 
 router.use('/testimonial',testimonialRoutes);
+
+router.use('/portfolio',portfolioRoutes);
 
 export default router;

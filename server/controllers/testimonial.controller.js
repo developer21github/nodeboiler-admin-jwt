@@ -45,7 +45,7 @@ function getById(req, res) {
       if (oTestimonial) {
         return res.status(httpStatus.OK).send({message: "Get testimonial information", data: oTestimonial});
       }
-      return res.status(httpStatus.BAD_REQUEST).send({message: "Some error accuard while grt testimonial information"});
+      return res.status(httpStatus.BAD_REQUEST).send({message: "Some error accuard while get testimonial information"});
     })
     .catch((err)=>res.status(httpStatus.INTERNAL_SERVER_ERROR).send({message: err}));
 }
@@ -72,7 +72,7 @@ function create(req, res, next) {
           if (savedTestimonial) {
             return res.status(httpStatus.OK).send({message: "Testimonial has been added successfully."});
           }
-          return res.status(httpStatus.OK).send({message: "Some error accrued while added testimonial."});
+          return res.status(httpStatus.BAD_REQUEST).send({message: "Some error accrued while added testimonial."});
         })
         .catch((err)=>res.status(httpStatus.INTERNAL_SERVER_ERROR).send({message: err}));
     }
